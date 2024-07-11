@@ -285,3 +285,34 @@ footer p {
         margin-right: 10px; /* Adjusted margin for smaller screens */
     }
 }
+
+/* Section title styles */
+.section-title {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px 0; /* Vertical padding for spacing */
+    border-bottom: 2px solid #003057; /* Bottom border for emphasis */
+}
+
+.section-title-text {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text for prominence */
+    letter-spacing: 1px; /* Spacing between letters */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Padding for spacing */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .section-title {
+        margin-top: 30px; /* Adjust top margin for smaller screens */
+        padding: 15px 0; /* Adjust padding for smaller screens */
+    }
+
+    .section-title-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+}
