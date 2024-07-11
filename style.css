@@ -1,0 +1,287 @@
+/* Reset and global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #003057; /* Best Buy blue */
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px; /* Adjusted top position for visibility */
+    z-index: 20; /* Ensure it's above other content */
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #003057;
+    display: none;
+    z-index: 10;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Section title styles */
+.section-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.section-title-text {
+    font-size: 2rem;
+    color: #333;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Glide slider styles */
+.glide-container {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f0f0f0; /* Light gray background */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.glide {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.glide__track {
+    overflow: hidden; /* Hide overflow */
+}
+
+.glide__slides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap; /* Ensures slides stay in a row */
+    overflow-x: scroll; /* Enable horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+}
+
+.glide__slide {
+    display: inline-block;
+    margin-right: 20px; /* Space between slides */
+    scroll-snap-align: start; /* Snap to start of each slide */
+    transition: transform 0.3s ease; /* Smooth transition */
+    border-radius: 10px; /* Rounded corners for slides */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for each slide */
+}
+
+.glide__slide img {
+    max-width: 100%; /* Ensure images resize appropriately */
+    height: auto;
+    display: block; /* Center images */
+    margin: 0 auto;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.glide__slide:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Image gallery styles */
+.image-gallery {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between items */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    flex: 1 0 300px; /* Each gallery item takes one third of the container width, with a max width of 300px */
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: relative; /* Ensure position relative for absolute elements */
+}
+
+.gallery-item img {
+    width: 100%; /* Ensure image width is 100% of parent container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.gallery-item .product-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.gallery-item .product-info h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.gallery-item .product-info p {
+    margin: 5px 0;
+}
+
+.gallery-item .product-info .price {
+    font-size: 1.2rem;
+    color: #e74c3c; /* Red color for price */
+    font-weight: bold;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+    background-color: #003057; /* Best Buy blue */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-column p:last-child {
+    margin-bottom: 0;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #003057;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .gallery-item {
+        flex: 1 0 100%; /* Each gallery item takes full width on smaller screens */
+    }
+
+    .glide__slide {
+        margin-right: 10px; /* Adjusted margin for smaller screens */
+    }
+}
